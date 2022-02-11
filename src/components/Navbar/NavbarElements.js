@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Link as LinkR } from "react-dom";
+import { Link as LinkR } from "react-router-dom";
 
 export const Nav = styled.nav`
   background: #000;
@@ -13,3 +13,8 @@ export const NavbarContainer = styled.div`
   height: 80px;
   width: 100%;
 `;
+
+export const NavLogo = styled(LinkR)`
+color: red;
+text-decoration: none;
+`
