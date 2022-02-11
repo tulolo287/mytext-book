@@ -4,7 +4,7 @@ const Navbar = () => {
     <>
       <Nav>
         <NavbarContainer>
-          <a href="/">Logo</a>
+          <NavLogo to="/">Logo</NavLogo>
         </NavbarContainer>
       </Nav>
     </>
