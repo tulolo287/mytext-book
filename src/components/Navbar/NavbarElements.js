@@ -5,6 +5,8 @@ export const Nav = styled.nav`
   background: #000;
   height: 80px;
   position: sticky;
+    
+  z-index: 10; 
 `;
 
 export const NavbarContainer = styled.div`
@@ -12,6 +14,8 @@ export const NavbarContainer = styled.div`
   justify-content: space-between;
   height: 80px;
   width: 100%;
+ 
+   
 `;
 
 export const NavLogo = styled(LinkR)`

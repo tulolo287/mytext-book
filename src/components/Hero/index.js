@@ -6,12 +6,12 @@ import {
   HeroH1,
   HeroP,
   HeroBtnWrapper,
-  Button,
   ArrowRight,
   ArrowForward,
 } from "./HeroElements";
 import Video from "../../videos/video.mp4";
 import React, { useState } from "react";
+import { Button } from "../ButtonElements";
 
 
 const Hero = () => {
@@ -28,7 +28,7 @@ const Hero = () => {
         <HeroH1>Bank jllllj k</HeroH1>
         <HeroP>lorem inpjkl ljj ljlj l l l l lllj;; kjlj</HeroP>
         <HeroBtnWrapper>
-          <Button to="signin" onMouseEnter={onHover} onMouseLeave={onHover}>
+          <Button dark='true' to="signin" onMouseEnter={onHover} onMouseLeave={onHover}>
             Get started{hover ? <ArrowForward /> : <ArrowRight />}
           </Button>
         </HeroBtnWrapper>
