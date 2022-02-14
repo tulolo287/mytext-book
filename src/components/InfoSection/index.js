@@ -8,9 +8,11 @@ import {
   BtnWrap,
   TopLine,
   Heading,
-  Subtitle
+  Subtitle,
+  ImgWrap,
+  Image
 } from "./InfoElements";
-import Button from "../ButtonElements";
+import {Button} from "../ButtonElements";
 
 export const InfoSection = () => {
   return (
@@ -29,7 +31,11 @@ export const InfoSection = () => {
               </BtnWrap>
             </TextWrapper>
           </Column1>
-          <Column2></Column2>
+          <Column2>
+          <ImgWrap>
+          <Image/>
+          </ImgWrap>
+          </Column2>
         </InfoRow>
       </InfoWrapper>
     </InfoContainer>

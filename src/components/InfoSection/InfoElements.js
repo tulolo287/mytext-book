@@ -5,7 +5,7 @@ background-color: grey;
 `
 export const InfoWrapper = styled.div`
 display: grid;
-height: 800px;
+height: 500px;
 width: 100%;
 max-width: 1100px;
 
@@ -13,6 +13,9 @@ max-width: 1100px;
 
 export const InfoRow = styled.div`
 display: grid;
+
+`
+export const BtnWrap = styled.div`
 
 `
 
@@ -36,4 +39,12 @@ export const Heading = styled.h1`
 `
 export const Subtitle = styled.p`
 color: red;
+`
+export const ImgWrap = styled.div`
+max-width: 500px;
+height: 100%;
+`
+export const Image = styled.img`
+width: 100%;
+
 `

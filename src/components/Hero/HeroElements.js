@@ -3,7 +3,6 @@ import { MdArrowForward, MdKeyboardArrowRight } from "react-icons/md";
 import { Link as LinkR } from "react-router-dom";
 
 export const HeroContainer = styled.div`
-  border: 1px solid green;
   background-color: grey;
   display: flex;
   justify-content: center;
