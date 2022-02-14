@@ -15,5 +15,5 @@ align-items: center;
   background-color: black;
   border: 1px solid green;
 }
-color: ${({ dark }) => (dark ? "#ff0000" : "#fff")}
+color: ${({ dark }) => (dark ? "#ff0000" : "#fff")};
 `
