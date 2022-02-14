@@ -14,26 +14,26 @@ import {
 } from "./InfoElements";
 import { Button } from "../ButtonElements";
 
-export const InfoSection = () => {
+export const InfoSection = ({topLine, headLine, id, buttonLabel, description, img, alt}) => {
   return (
-    <InfoContainer>
+    <InfoContainer id={id}>
       <InfoWrapper>
         <InfoRow>
           <Column1>
             <TextWrapper>
-              <TopLine>TopLine</TopLine>
-              <Heading>Heading</Heading>
-              <Subtitle>Subtitle</Subtitle>
+              <TopLine>{topLine}</TopLine>
+              <Heading>{headLine}</Heading>
+              <Subtitle>{description}</Subtitle>
               <BtnWrap>
                 <Button dark={true} to="/info">
-                  Info
+                  {buttonLabel}
                 </Button>
               </BtnWrap>
             </TextWrapper>
           </Column1>
           <Column2>
             <ImgWrap>
-              <Image />
+              <Image src={img} alt={alt}/>
             </ImgWrap>
           </Column2>
         </InfoRow>
