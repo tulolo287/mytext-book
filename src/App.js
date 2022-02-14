@@ -4,12 +4,10 @@ import "./App.css";
 import InfoSection from "./components/InfoSection";
 
 function App() {
-
   return (
     <div className="App">
       <Router>
         <Home />
-        <InfoSection/>
       </Router>
     </div>
   );

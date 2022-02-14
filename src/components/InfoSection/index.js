@@ -12,7 +12,7 @@ import {
   ImgWrap,
   Image
 } from "./InfoElements";
-import {Button} from "../ButtonElements";
+import { Button } from "../ButtonElements";
 
 export const InfoSection = () => {
   return (
@@ -32,9 +32,9 @@ export const InfoSection = () => {
             </TextWrapper>
           </Column1>
           <Column2>
-          <ImgWrap>
-          <Image/>
-          </ImgWrap>
+            <ImgWrap>
+              <Image />
+            </ImgWrap>
           </Column2>
         </InfoRow>
       </InfoWrapper>
