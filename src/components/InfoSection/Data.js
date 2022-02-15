@@ -3,7 +3,7 @@ export const homeObjOne = {
   lightBg: false,
   lightText: true,
   lightTextDesc: true,
-  topLine: "Top Line",
+  topLine: "Top Line2",
   headLine: "Head line",
   description: "Bla blas jljl kljlj kj ll ",
   buttonLabel: "Get started",
