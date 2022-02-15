@@ -13,6 +13,9 @@ max-width: 1100px;
 
 export const InfoRow = styled.div`
 display: grid;
+grid-auto-columns: minmax(auto, 1fr);
+align-items: center;
+grid-template-areas: 'col1 col2';
 
 `
 export const BtnWrap = styled.div`
