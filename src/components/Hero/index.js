@@ -28,7 +28,7 @@ const Hero = () => {
         <HeroH1>Bank jllllj kttt</HeroH1>
         <HeroP>lorem inpjkl ljj ljlj l l l l lllj;; kjlj</HeroP>
         <HeroBtnWrapper>
-          <Button dark={false} to="signin" onMouseEnter={onHover} onMouseLeave={onHover}>
+          <Button dark={true} to="/signin" onMouseEnter={onHover} onMouseLeave={onHover}>
             Get started{hover ? <ArrowForward /> : <ArrowRight />}
           </Button>
         </HeroBtnWrapper>

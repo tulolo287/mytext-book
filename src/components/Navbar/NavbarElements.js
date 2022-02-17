@@ -53,7 +53,7 @@ export const NavLinks = styled(LinkR)`
 display: flex;
 padding: 0 1rem;
 cursor: pointer;
-hight: 100%;
+height: 100%;
 color: #fff;
 text-decoration: none;
 align-items: center;
