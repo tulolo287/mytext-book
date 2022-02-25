@@ -2,9 +2,10 @@ import styled from "styled-components";
 import { Link as LinkR } from "react-router-dom";
 
 export const Nav = styled.nav`
-  background: ${({scrollNav}) => (scrollNav ? '#000' : '#fff')};
+  background: ${({scrollNav}) => (scrollNav ? '#000' : 'transparent')};
   height: 80px;
   position: sticky;
+  top: 0;
   margin-top: -80px;
   z-index: 10; 
 `;
