@@ -15,19 +15,19 @@ import {
 import { Button } from "../ButtonElements";
 import img from "../../images/svg-1.svg";
 
-export const InfoSection = ({topLine, headLine, id, buttonLabel, description, alt}) => {
+export const InfoSection = ({topLine, headLine, id, buttonLabel, description, alt, dark, link, start}) => {
   return (
     <>
     <InfoContainer id={id}>
       <InfoWrapper>
-        <InfoRow>
+        <InfoRow start={start}>
           <Column1>
             <TextWrapper>
               <TopLine>{topLine}</TopLine>
               <Heading>{headLine}</Heading>
               <Subtitle>{description}</Subtitle>
               <BtnWrap>
-                <Button dark={true} to="/catalog">
+                <Button dark={dark} to={link}>
                   {buttonLabel}
                 </Button>
               </BtnWrap>
@@ -42,29 +42,7 @@ export const InfoSection = ({topLine, headLine, id, buttonLabel, description, al
       </InfoWrapper>
     </InfoContainer>
 
-  <InfoContainer id={id}>
-      <InfoWrapper>
-        <InfoRow>
-          <Column1>
-            <TextWrapper>
-              <TopLine>{topLine}</TopLine>
-              <Heading>{headLine}</Heading>
-              <Subtitle>{description}</Subtitle>
-              <BtnWrap>
-                <Button dark={true} to="/info">
-                  {buttonLabel}
-                </Button>
-              </BtnWrap>
-            </TextWrapper>
-          </Column1>
-          <Column2>
-            <ImgWrap>
-              <Image src={img} alt={alt}/>
-            </ImgWrap>
-          </Column2>
-        </InfoRow>
-      </InfoWrapper>
-    </InfoContainer>
+
     </>
   );
 };

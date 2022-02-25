@@ -11,7 +11,9 @@ export const homeObjOne = {
   img: require("../../images/svg-1.svg"),
   alt: "Catalog",
   dark: true,
+  start: true,
   primary: true,
+  link: "/catalog",
   darkText: false
 };
 export const homeObj2 = {
@@ -26,7 +28,9 @@ export const homeObj2 = {
   imgStart: false,
   img: require("../../images/svg-1.svg"),
   alt: "Car",
-  dark: true,
+  link: "/about",
+  start: false,
+  dark: false,
   primary: true,
   darkText: false
 };

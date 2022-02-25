@@ -15,7 +15,8 @@ export const InfoRow = styled.div`
 display: grid;
 grid-auto-columns: minmax(auto, 1fr);
 align-items: center;
-grid-template-areas: 'col1 col2';
+
+grid-template-areas: ${({start}) => (start ? `"col1 col2"` : `"col2 col1"`)};
 
 `
 export const BtnWrap = styled.div`
