@@ -1,7 +1,9 @@
-import {FooterContainer, FooterWrapper, FooterItem, FooterTitle} from './FooteElements'
+import {FooterContainer, FooterWrapper, FooterItem, FooterTitle, SocialMedia, SocialMediaLogo, SocialMediaIcons, SocialMediaLink, SocialMediaWrites, FooterWrap} from './FooteElements'
+import {FaFacebook, FaYoutube} from 'react-icons/fa'
 
 const Footer = () => {
   return (
+    <FooterWrap>
     <FooterContainer>
         <FooterWrapper>
             <FooterTitle>Some title</FooterTitle>
@@ -16,6 +18,17 @@ const Footer = () => {
             <FooterItem to="/contacts">Contacts</FooterItem>
         </FooterWrapper>
     </FooterContainer>
+
+        <SocialMedia>
+          <SocialMediaLogo>Logo</SocialMediaLogo>
+          <SocialMediaIcons>
+            <SocialMediaLink to="/"><FaFacebook/></SocialMediaLink>
+            <SocialMediaLink to="/"><FaYoutube/></SocialMediaLink>
+          </SocialMediaIcons>
+          <SocialMediaWrites>my writes {new Date().getFullYear()}</SocialMediaWrites>
+        </SocialMedia>
+        
+    </FooterWrap>
   )
 }
 

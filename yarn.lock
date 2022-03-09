@@ -7952,6 +7952,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lodash.throttle@npm:^4.1.1":
+  version: 4.1.1
+  resolution: "lodash.throttle@npm:4.1.1"
+  checksum: 129c0a28cee48b348aef146f638ef8a8b197944d4e9ec26c1890c19d9bf5a5690fe11b655c77a4551268819b32d27f4206343e30c78961f60b561b8608c8c805
+  languageName: node
+  linkType: hard
+
 "lodash.uniq@npm:^4.5.0":
   version: 4.5.0
   resolution: "lodash.uniq@npm:4.5.0"
@@ -8353,6 +8360,8 @@ __metadata:
     react-is: ^17.0.2
     react-router-dom: ^6.2.1
     react-scripts: 5.0.0
+    react-scroll: ^1.8.6
+    scroll: ^3.0.1
     styled-components: ^5.3.3
     web-vitals: ^2.1.4
     yarn-upgrade-all: ^0.6.1
@@ -10148,6 +10157,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-scroll@npm:^1.8.6":
+  version: 1.8.6
+  resolution: "react-scroll@npm:1.8.6"
+  dependencies:
+    lodash.throttle: ^4.1.1
+    prop-types: ^15.7.2
+  peerDependencies:
+    react: ^15.5.4 || ^16.0.0 || ^17.0.0
+    react-dom: ^15.5.4 || ^16.0.0 || ^17.0.0
+  checksum: 92bbd56f01db41217c543fe2af4537221228f0e3615beaeb33abc66ae6452598bdde5cfc705db65883b80d3050afd1de5e55890d5330ad4b61774978d8b49fd4
+  languageName: node
+  linkType: hard
+
 "react@npm:^17.0.2":
   version: 17.0.2
   resolution: "react@npm:17.0.2"
@@ -10628,6 +10650,13 @@ __metadata:
     ajv-formats: ^2.1.1
     ajv-keywords: ^5.0.0
   checksum: c843e92fdd1a5c145dbb6ffdae33e501867f9703afac67bdf35a685e49f85b1dcc10ea250033175a64bd9d31f0555bc6785b8359da0c90bcea30cf6dfbb55a8f
+  languageName: node
+  linkType: hard
+
+"scroll@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "scroll@npm:3.0.1"
+  checksum: e6b045347adace30035073882e6ef2af7e1c81dd611faf3a578ca8cd0d1a3a9da54932dd97ed6fd99c9573351c758fa50e6d8ed4afb5bd3a33794b6c48d25922
   languageName: node
   linkType: hard
 

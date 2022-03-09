@@ -11,6 +11,8 @@ import {
 } from "./NavbarElements";
 import { FaBars } from "react-icons/fa";
 import {useState, useEffect} from 'react';
+import {animateScroll as scroll} from 'react-scroll';
+import Signin from '../../pages/Signin';
 
 const Navbar = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(true);
@@ -26,27 +28,30 @@ const Navbar = ({ toggle }) => {
   useEffect(() => {
     window.addEventListener('scroll', changeScrollNav)
   }, [])
+
+  const toggleHome = () => {
+    scroll.scrollToTop();
+  }
+
   return (
     <>
       <Nav scrollNav={scrollNav}>
         <NavbarContainer>
-          <NavLogo to="/">Logo</NavLogo>
+          <NavLogo to="/" onClick={toggleHome}>Logo</NavLogo>
           <MobileIcon onClick={toggle}>
             <FaBars />
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <NavLinks to="/catalog">Catalog</NavLinks>
+              <NavLinks to="catalog" smooth={true} duration={500} spy={true} offset={-80} exact='true'>Catalog</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="/about">About</NavLinks>
+              <NavLinks to="about" smooth={true} duration={500} spy={true} offset={-80} exact='true'>About</NavLinks>
             </NavItem>
-            <NavItem>
-              <NavLinks to="/about">About</NavLinks>
-            </NavItem>
+           
           </NavMenu>
           <NavBtn>
-            <NavBtnLink to="/signin">Sign in</NavBtnLink>
+            <NavBtnLink to={Signin}>Sign in</NavBtnLink>
           </NavBtn>
         </NavbarContainer>
       </Nav>

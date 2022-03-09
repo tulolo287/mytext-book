@@ -49,6 +49,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-is", "npm:17.0.2"],
             ["react-router-dom", "virtual:34e01756829cbcf2d8f905d26a00cf8f61fd54e56b0d3f6e87679f74176b35cf1238c7c73186e87c64b29e14ae0ddb9b351e020c95bf444497b89f707ce9d721#npm:6.2.1"],
             ["react-scripts", "virtual:34e01756829cbcf2d8f905d26a00cf8f61fd54e56b0d3f6e87679f74176b35cf1238c7c73186e87c64b29e14ae0ddb9b351e020c95bf444497b89f707ce9d721#npm:5.0.0"],
+            ["react-scroll", "virtual:34e01756829cbcf2d8f905d26a00cf8f61fd54e56b0d3f6e87679f74176b35cf1238c7c73186e87c64b29e14ae0ddb9b351e020c95bf444497b89f707ce9d721#npm:1.8.6"],
+            ["scroll", "npm:3.0.1"],
             ["styled-components", "virtual:34e01756829cbcf2d8f905d26a00cf8f61fd54e56b0d3f6e87679f74176b35cf1238c7c73186e87c64b29e14ae0ddb9b351e020c95bf444497b89f707ce9d721#npm:5.3.3"],
             ["web-vitals", "npm:2.1.4"],
             ["yarn-upgrade-all", "npm:0.6.1"]
@@ -10881,6 +10883,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["lodash.throttle", [
+        ["npm:4.1.1", {
+          "packageLocation": "./.yarn/cache/lodash.throttle-npm-4.1.1-856641af92-129c0a28ce.zip/node_modules/lodash.throttle/",
+          "packageDependencies": [
+            ["lodash.throttle", "npm:4.1.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["lodash.uniq", [
         ["npm:4.5.0", {
           "packageLocation": "./.yarn/cache/lodash.uniq-npm-4.5.0-7c270dca85-a4779b57a8.zip/node_modules/lodash.uniq/",
@@ -11324,6 +11335,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-is", "npm:17.0.2"],
             ["react-router-dom", "virtual:34e01756829cbcf2d8f905d26a00cf8f61fd54e56b0d3f6e87679f74176b35cf1238c7c73186e87c64b29e14ae0ddb9b351e020c95bf444497b89f707ce9d721#npm:6.2.1"],
             ["react-scripts", "virtual:34e01756829cbcf2d8f905d26a00cf8f61fd54e56b0d3f6e87679f74176b35cf1238c7c73186e87c64b29e14ae0ddb9b351e020c95bf444497b89f707ce9d721#npm:5.0.0"],
+            ["react-scroll", "virtual:34e01756829cbcf2d8f905d26a00cf8f61fd54e56b0d3f6e87679f74176b35cf1238c7c73186e87c64b29e14ae0ddb9b351e020c95bf444497b89f707ce9d721#npm:1.8.6"],
+            ["scroll", "npm:3.0.1"],
             ["styled-components", "virtual:34e01756829cbcf2d8f905d26a00cf8f61fd54e56b0d3f6e87679f74176b35cf1238c7c73186e87c64b29e14ae0ddb9b351e020c95bf444497b89f707ce9d721#npm:5.3.3"],
             ["web-vitals", "npm:2.1.4"],
             ["yarn-upgrade-all", "npm:0.6.1"]
@@ -14139,6 +14152,34 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["react-scroll", [
+        ["npm:1.8.6", {
+          "packageLocation": "./.yarn/cache/react-scroll-npm-1.8.6-43a40f3a54-92bbd56f01.zip/node_modules/react-scroll/",
+          "packageDependencies": [
+            ["react-scroll", "npm:1.8.6"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:34e01756829cbcf2d8f905d26a00cf8f61fd54e56b0d3f6e87679f74176b35cf1238c7c73186e87c64b29e14ae0ddb9b351e020c95bf444497b89f707ce9d721#npm:1.8.6", {
+          "packageLocation": "./.yarn/__virtual__/react-scroll-virtual-79d4115d08/0/cache/react-scroll-npm-1.8.6-43a40f3a54-92bbd56f01.zip/node_modules/react-scroll/",
+          "packageDependencies": [
+            ["react-scroll", "virtual:34e01756829cbcf2d8f905d26a00cf8f61fd54e56b0d3f6e87679f74176b35cf1238c7c73186e87c64b29e14ae0ddb9b351e020c95bf444497b89f707ce9d721#npm:1.8.6"],
+            ["@types/react", null],
+            ["@types/react-dom", null],
+            ["lodash.throttle", "npm:4.1.1"],
+            ["prop-types", "npm:15.8.1"],
+            ["react", "npm:17.0.2"],
+            ["react-dom", "virtual:34e01756829cbcf2d8f905d26a00cf8f61fd54e56b0d3f6e87679f74176b35cf1238c7c73186e87c64b29e14ae0ddb9b351e020c95bf444497b89f707ce9d721#npm:17.0.2"]
+          ],
+          "packagePeers": [
+            "@types/react-dom",
+            "@types/react",
+            "react-dom",
+            "react"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["readable-stream", [
         ["npm:2.3.7", {
           "packageLocation": "./.yarn/cache/readable-stream-npm-2.3.7-77b22a9818-e4920cf754.zip/node_modules/readable-stream/",
@@ -14658,6 +14699,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ajv", "npm:8.10.0"],
             ["ajv-formats", "virtual:4b7d8bb1684f7f69bf042a03dae4d118ab00edf0e34f409e5270fb3cce9e5fcf8ce9581b8f5bc8597c1e50c52a23eba5d4eadeede8c58ab0be3187e2389e11d5#npm:2.1.1"],
             ["ajv-keywords", "virtual:4b7d8bb1684f7f69bf042a03dae4d118ab00edf0e34f409e5270fb3cce9e5fcf8ce9581b8f5bc8597c1e50c52a23eba5d4eadeede8c58ab0be3187e2389e11d5#npm:5.1.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["scroll", [
+        ["npm:3.0.1", {
+          "packageLocation": "./.yarn/cache/scroll-npm-3.0.1-26a443f234-e6b045347a.zip/node_modules/scroll/",
+          "packageDependencies": [
+            ["scroll", "npm:3.0.1"]
           ],
           "linkType": "HARD",
         }]
