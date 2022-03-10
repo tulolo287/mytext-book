@@ -1,7 +1,9 @@
+import Signin from "../components/Signin";
+
 const Signin = () => {
     return (
     <>
-    Sign in....
+   <Signin/>
     </>
     )
 }
