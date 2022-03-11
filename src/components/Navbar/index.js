@@ -12,7 +12,7 @@ import {
 import { FaBars } from "react-icons/fa";
 import {useState, useEffect} from 'react';
 import {animateScroll as scroll} from 'react-scroll';
-import Signin from '../../pages/Signin';
+
 
 const Navbar = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(true);
@@ -51,7 +51,7 @@ const Navbar = ({ toggle }) => {
            
           </NavMenu>
           <NavBtn>
-            <NavBtnLink to={Signin}>Sign in</NavBtnLink>
+            <NavBtnLink to='/signin'>Sign in</NavBtnLink>
           </NavBtn>
         </NavbarContainer>
       </Nav>

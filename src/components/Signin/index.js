@@ -1,10 +1,10 @@
-import {Container, FormLabel, FormWrap, FormContent, Form, FormH1, FormInput, FormButton} from './SigninElements';
+import {Container, FormLabel, FormWrap, FormContent, Form, FormH1, FormInput, FormButton, Icon, Text} from './SigninElements';
 
 const Signin = () => {
     return (<>
     <Container>
         <FormWrap>
-            <Icon></Icon>
+        <Icon></Icon>
             <FormContent>
                 <Form action='#'>
                     <FormH1>Sign in</FormH1>
