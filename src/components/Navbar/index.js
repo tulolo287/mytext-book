@@ -42,17 +42,24 @@ const Navbar = ({ toggle }) => {
             <FaBars />
           </MobileIcon>
           <NavMenu>
+            
             <NavItem>
               <NavLinks to="catalog" smooth={true} duration={500} spy={true} offset={-80} exact='true'>Catalog</NavLinks>
             </NavItem>
             <NavItem>
               <NavLinks to="about" smooth={true} duration={500} spy={true} offset={-80} exact='true'>About</NavLinks>
             </NavItem>
-           
+      
           </NavMenu>
+
           <NavBtn>
             <NavBtnLink to='/signin'>Sign in</NavBtnLink>
           </NavBtn>
+          
+          <NavBtn>
+            <NavBtnLink to='/cart'>Cart</NavBtnLink>
+          </NavBtn>
+
         </NavbarContainer>
       </Nav>
     </>

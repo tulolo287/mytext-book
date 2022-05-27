@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Signin from "./pages/Signin";
+import Cart from "./pages/Cart";
 import InfoSection from "./components/InfoSection";
 
 
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='signin' element={<Signin/>} />
+          <Route path='cart' element={<Cart/>} />
         </Routes>
     
       </Router>
