@@ -1,10 +1,10 @@
 import SignIn from "../components/SignIn";
 
 const Signin = () => {
-    return (
+  return (
     <>
-   <SignIn/>
+      <SignIn/>
     </>
-    )
+  )
 }
 export default Signin;

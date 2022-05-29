@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import Hero from "../components/Hero";
-import React, { useState } from "react";
+import { useState } from "react";
 import InfoSection from "../components/InfoSection";
 import Services from "../components/Services";
 
