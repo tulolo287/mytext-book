@@ -1,7 +1,5 @@
-
-
 export default function Basket(props) {
-  const {cartItems, onAdd} = props;
+  const {cartItems, onAdd, onRemove} = props;
 
   return (
     <aside className="block col-1"><h2>Cart Items</h2>
@@ -9,10 +7,14 @@ export default function Basket(props) {
       {cartItems.length == 0 && <div>Cart is empty...</div>}
     </div>
     {cartItems.map(item => 
-    <div key={item.id} className='row'>
+    (<div key={item.id + item.title} className='row'>
       <div className='col-2'>{item.title}</div>
-      <button onClick={onAdd}>+</button>
-    </div>)}
+      <button className='qtyAdd' onClick={() => onAdd(item)}>+</button>
+      <button className='qtyRemove' onClick={() => onRemove(item)}>-</button>
+      <div>{item.qty} x ${item.price.toFixed(2)}</div>
+      Price: {item.price * item.qty}
+      {console.log(item)}
+    </div>))}
     </aside>
   )
 }
