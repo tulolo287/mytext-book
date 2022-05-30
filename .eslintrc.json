@@ -12,7 +12,7 @@
     "linebreak-style": 1,
     "quotes": ["warn", "double"],
     "react/react-in-jsx-scope": 0,
-    "react/jsx-uses-react": 0,
+    "react/jsx-uses-react": 0
     
   },
   "parserOptions": {
