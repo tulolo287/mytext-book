@@ -3,7 +3,7 @@ export default function Product(props) {
   return (
     <div className="row">
     <div>
-    <img className="small" src="" alt="img"/>
+    <img className="small" src={product.image} alt="img"/>
     <h3>{product.title}</h3>
     <div><span>price:</span> {product.price}</div>
     <button onClick={() => onAdd(product)}>Add to Cart</button>

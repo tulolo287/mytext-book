@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  
 }
 
 .App-logo {
@@ -45,7 +44,6 @@ a {
 .row {
   display: flex;
   justify-content: space-between;
-
 }
 .block {
   background-color: #eee;
@@ -76,6 +74,12 @@ button {
   width: 100%;
   cursor: pointer;
 }
+button.badge {
+  background-color: red;
+  border: none;
+  width: 1.5rem;
+  color: white;
+}
 
 button.qtyAdd {
   background-color: rgb(34, 0, 255);
@@ -95,4 +99,22 @@ button.qtyRemove {
   cursor: pointer;
   width: fit-content;
 }
+.products {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 
+.product {
+  padding: 2rem;
+}
+.cart2 {
+  background-color: pink;
+  height: 70px;
+  vertical-align: center;
+}
+.cart2 button {
+  padding: 20px;
+  font-size: 20px;
+  background-color: aqua;
+  width: fit-content;
+}

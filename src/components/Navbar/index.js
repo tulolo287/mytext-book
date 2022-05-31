@@ -10,15 +10,15 @@ import {
   NavBtnLink,
 } from "./NavbarElements";
 import { FaBars } from "react-icons/fa";
-import {useState, useEffect} from 'react';
-import {animateScroll as scroll} from 'react-scroll';
+import { useState, useEffect } from 'react';
+import { animateScroll as scroll } from 'react-scroll';
 
 
 const Navbar = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(true);
 
   const changeScrollNav = () => {
-    if(window.scrollY >= 80) {
+    if (window.scrollY >= 80) {
       setScrollNav(true);
     } else {
       setScrollNav(false);
@@ -42,22 +42,26 @@ const Navbar = ({ toggle }) => {
             <FaBars />
           </MobileIcon>
           <NavMenu>
-            
+
             <NavItem>
               <NavLinks to="catalog" smooth={true} duration={500} spy={true} offset={-80} exact='true'>Catalog</NavLinks>
             </NavItem>
             <NavItem>
               <NavLinks to="about" smooth={true} duration={500} spy={true} offset={-80} exact='true'>About</NavLinks>
             </NavItem>
-      
+
           </NavMenu>
 
           <NavBtn>
             <NavBtnLink to='/signin'>Sign in</NavBtnLink>
           </NavBtn>
-          
+
           <NavBtn>
             <NavBtnLink to='/cart'>Cart</NavBtnLink>
+          </NavBtn>
+
+          <NavBtn>
+            <NavBtnLink to='/cart2'>Cart2</NavBtnLink>
           </NavBtn>
 
         </NavbarContainer>
