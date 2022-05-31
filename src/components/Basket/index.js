@@ -1,5 +1,3 @@
-
-
 export default function Basket(props) {
   const {cartItems, onAdd, onRemove} = props;
 
@@ -22,6 +20,15 @@ export default function Basket(props) {
       
       )}
     </div>
+    {cartItems.map(item => 
+    (<div key={item.id + item.title} className='row'>
+      <div className='col-2'>{item.title}</div>
+      <button className='qtyAdd' onClick={() => onAdd(item)}>+</button>
+      <button className='qtyRemove' onClick={() => onRemove(item)}>-</button>
+      <div>{item.qty} x ${item.price.toFixed(2)}</div>
+      Price: {item.price * item.qty}
+      {console.log(item)}
+    </div>))}
     </aside>
   )
 }
