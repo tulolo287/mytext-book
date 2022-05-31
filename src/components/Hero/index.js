@@ -10,7 +10,7 @@ import {
   ArrowForward,
 } from "./HeroElements";
 import Video from "../../videos/video.mp4";
-import React, { useState } from "react";
+import { useState } from "react";
 import { Button } from "../ButtonElements";
 
 

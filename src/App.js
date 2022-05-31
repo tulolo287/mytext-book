@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unresolved */
 
 import Home from "./pages/Home";
 
@@ -7,6 +6,7 @@ import "./App.css";
 import Signin from "./pages/Signin";
 import Cart from "./pages/Cart";
 import Cart2 from "./pages/Cart2";
+import Cart3 from "./pages/Cart3";
 
 
 function App() {
@@ -18,6 +18,7 @@ function App() {
           <Route path='signin' element={<Signin />} />
           <Route path='cart' element={<Cart />} />
           <Route path='cart2' element={<Cart2 />} />
+          <Route path='cart3' element={<Cart3 />} />
         </Routes>
 
       </Router>

@@ -46,7 +46,7 @@ export default function Basket(props) {
           </div>
         </>
       )}
-      <button onClick={() => alert('ok')}>Checkout</button>
+      <button onClick={() => alert("ok")}>Checkout</button>
     </aside>
   )
 }
