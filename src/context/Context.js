@@ -14,7 +14,8 @@ const Context = ({ children }) => {
     image: faker.image.image(),
     price: faker.commerce.price(),
     rating: faker.random.numeric(),
-    fastDelivery: faker.datatype.boolean()
+    fastDelivery: faker.datatype.boolean(),
+    stock: faker.datatype.boolean() 
   }))
 
   console.log(products);

@@ -1,11 +1,11 @@
-import { Card } from "react-bootstrap";
+import { Button, Card } from "react-bootstrap";
 import { Rating } from "./Rating";
 
 export const Product = ({ product }) => {
   return (
-    <>
+    <div className="products">
       <Card>
-        <Card.Img variant="top" alt={product.name} src={product.image} />
+        <Card.Img className="products" variant="top" alt={product.name} src={product.image} />
         <Card.Body>
           <Card.Title>{product.name}</Card.Title>
           <Card.Subtitle style={{ paddingBottom: 10 }}>
@@ -17,8 +17,10 @@ export const Product = ({ product }) => {
             )}
             <Rating rating={product.rating}></Rating>
           </Card.Subtitle>
+          <Button variant="danger">Remove from cart</Button>
+          <Button disabled={!product.stock}>{!product.stock ? "Out of stock" : "Add to cart"}</Button>
         </Card.Body>
       </Card>
-    </>
+    </div>
   );
 };
