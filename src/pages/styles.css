@@ -1,0 +1,21 @@
+.filters {
+  background-color: pink;
+  width: 20%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+.filters > button {
+  margin-top: 2rem;
+}
+.title {
+  font-size: 30px;
+  margin-bottom: 2rem;
+} 
+.title > span {
+  padding-top: 2rem;
+}
+.home {
+  display: flex;
+  justify-content: space-around;
+}

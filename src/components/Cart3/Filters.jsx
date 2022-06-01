@@ -3,7 +3,7 @@ import { Rating } from "./Rating.jsx"
 import { useState } from "react"
 
 export const Filters = () => {
-    const [rate, setRate] = useState(3)
+    const [rating, setRate] = useState(3)
     return (
         <div className='filters'>
             <span className='title'>Filter Products</span>
@@ -11,8 +11,9 @@ export const Filters = () => {
             <span><Form.Check inline label='Descending' name='group1' type='radio' id={`inline-2`}></Form.Check></span>
             <span><Form.Check inline label='Include out of Stock' name='group1' type='checkbox' id={`inline-3`}></Form.Check></span>
             <span><Form.Check inline label='Fast delivery' name='group1' type='checkbox' id={`inline-4`}></Form.Check></span>
-            <span><label style={{ paddingRight: 10 }}>Rating:</label>
-                <Rating rating={rate} onClick={(i) => setRate(i + 1)} style={{ cursor: "pointer" }} />
+            <span><label htmlFor="text" style={{ paddingRight: 10 }}>Rating:
+                <Rating id="text" rating={rating} onClick={(i) => setRate(i + 1)} style={{ cursor: "pointer" }} />
+            </label>
             </span>
             <Button variant='light'>Clear</Button>
         </div>

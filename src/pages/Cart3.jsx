@@ -2,7 +2,7 @@ import { Header } from "../components/Cart3/Header.jsx"
 import { CartState } from "../context/Context.js"
 import { Product } from "../components/Cart3/Product.jsx"
 import { Filters } from "../components/Cart3/Filters.jsx"
-import "./style.css"
+import "./styles.css"
 
 
 const Cart3 = () => {
