@@ -99,10 +99,6 @@ button.qtyRemove {
   cursor: pointer;
   width: fit-content;
 }
-.products {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
 
 .product {
   padding: 2rem;
