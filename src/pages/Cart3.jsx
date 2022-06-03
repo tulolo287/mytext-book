@@ -7,7 +7,7 @@ import "./styles.css"
 
 const Cart3 = () => {
   const { state: { products } } = CartState();
-  console.log(products);
+
 
   return (
     <>

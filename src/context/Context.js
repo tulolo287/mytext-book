@@ -15,14 +15,22 @@ const Context = ({ children }) => {
     price: faker.commerce.price(),
     rating: faker.random.numeric(),
     fastDelivery: faker.datatype.boolean(),
-    stock: faker.datatype.boolean() 
+    stock: faker.datatype.boolean(),
+    inStock: faker.random.numeric()
   }))
 
-  console.log(products);
+
 
   const [state, dispatch] = useReducer(cartReducer, {
     products: products,
     cart: []
+  })
+
+  const [filterState, filterDispatch] = useReducer(filterReducer, {
+    byStock: false,
+    byFastDelivery: false,
+    byRating: 0,
+    searchQuery: ""
   })
 
   return (

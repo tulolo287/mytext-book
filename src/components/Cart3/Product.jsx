@@ -5,7 +5,7 @@ import { Rating } from "./Rating";
 export const Product = ({ product }) => {
   const { state: { cart }, dispatch } = CartState();
 
-  console.log(cart);
+
 
   return (
     <div className="products">
