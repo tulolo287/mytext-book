@@ -14,7 +14,7 @@ const CartDetail = () => {
     setTotal(cart.reduce((acc, cur) => acc + Number(cur.price) * cur.qty, 0));
   }, [cart]);
 
-  console.log(cart);
+
 
   return (
     <>

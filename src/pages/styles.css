@@ -50,3 +50,26 @@
   padding: 0 20px;
   flex-direction: column;
 }
+@media (max-width: 771px) {
+  .filters {
+    width: 40%;
+    padding: 10px;
+    margin: 5px;
+  }
+  .filters > span {
+    font-size: 15px;
+  }
+  .title {
+    font-size: 18px !important;
+  }
+  .productContainer {
+    padding: 0;
+    width: 58%;
+  }
+  .products {
+    width: 100%;
+  }
+  .search {
+    display: none;
+  }
+}

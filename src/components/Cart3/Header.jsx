@@ -18,6 +18,10 @@ export const Header = () => {
     dispatch,
   } = CartState();
 
+  const { filterState: { searchQuery }, filterDispatch } = CartState();
+
+  console.log(searchQuery);
+
   return (
     <Navbar bg="dark" variant="dark" style={{ height: 80, marginBottom: 20 }}>
       <Container>
@@ -26,6 +30,7 @@ export const Header = () => {
         </Navbar.Brand>
         <Navbar.Text className="search">
           <FormControl
+            onChange={(e) => filterDispatch({ type: "FILTER_BY_SEARCH", payload: e.target.value })}
             style={{ width: 500 }}
             placeholder="Search"
             className="m-auto"

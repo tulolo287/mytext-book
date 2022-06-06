@@ -20,12 +20,18 @@ export const filterReducer = (state, action) => {
         case "FILTER_BY_STOCK":
             return { ...state, byStock: !state.byStock }
         case "FILTER_BY_DELIVERY":
-            return { ...state, sort: action.payload.by }
+            return { ...state, byFastDelivery: !state.byFastDelivery }
         case "FILTER_BY_RATING":
-            return { ...state, sort: action.payload }
+            return { ...state, byRating: action.payload }
         case "FILTER_BY_SEARCH":
-            return { ...state, sort: action.payload }
-
+            return { ...state, searchQuery: action.payload }
+        case "CLEAR_FILTER":
+            return {
+                byStock: false,
+                byFastDelivery: false,
+                byRating: 0,
+                searchQuery: ""
+            }
 
         default: return state;
     }
