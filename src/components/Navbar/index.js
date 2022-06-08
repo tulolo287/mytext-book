@@ -68,6 +68,10 @@ const Navbar = ({ toggle }) => {
             <NavBtnLink to='/cart3'>Cart3</NavBtnLink>
           </NavBtn>
 
+          <NavBtn>
+            <NavBtnLink to='/shop'>Shop</NavBtnLink>
+          </NavBtn>
+
         </NavbarContainer>
       </Nav>
     </>
