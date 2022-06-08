@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { FaSearch } from 'react-icons/fa'
+import { FaIdBadge, FaSearch, FaShoppingCart } from 'react-icons/fa'
 
 const Container = styled.div`
     background-color: black;
@@ -13,6 +13,7 @@ const Wrapper = styled.div`
     padding: 20px;
     display: flex;
     justify-content: space-between;
+    
 `
 const Left = styled.div`
     flex: 1;
@@ -24,6 +25,9 @@ const Center = styled.div`
 `
 const Right = styled.div`
     flex: 1;
+    display: flex;
+    justify-content: flex-end;
+
 `
 const Language = styled.span`
     font-size: 14px;
@@ -35,15 +39,31 @@ const SearchContainer = styled.div`
     margin-left: 25px;
     padding: 5px;
 `
+const Input = styled.input`
+    border: none;
+`
+const Logo = styled.h1`
+    font-weight: bold;
+    text-align: center;
+`
+const MenuItem = styled.div`
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 25px;
+`
 
 const Header = () => {
     return (
         <Container><Wrapper>
             <Left>
                 <Language>EN</Language>
-                <SearchContainer>input<FaSearch /></SearchContainer>
+                <SearchContainer><Input /><FaSearch /></SearchContainer>
             </Left>
-            <Center>sdfas</Center><Right>sdfsaf</Right></Wrapper></Container>
+            <Center><Logo>Lama.</Logo></Center><Right>
+                <MenuItem>REGISTER</MenuItem>
+                <MenuItem>SIGN IN</MenuItem>
+                <MenuItem><FaIdBadge /><FaShoppingCart /></MenuItem>
+            </Right></Wrapper></Container>
 
     )
 }
