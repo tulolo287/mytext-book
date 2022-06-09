@@ -57,7 +57,10 @@ const Header = () => {
         <Container><Wrapper>
             <Left>
                 <Language>EN</Language>
-                <SearchContainer><Input /><FaSearch /></SearchContainer>
+                <SearchContainer>
+                    <Input />
+                    <FaSearch style={{ color: "grey", fontSize: 16 }} />
+                </SearchContainer>
             </Left>
             <Center><Logo>Lama.</Logo></Center><Right>
                 <MenuItem>REGISTER</MenuItem>
