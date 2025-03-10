@@ -1,8 +1,10 @@
-import React from "react";
+import MainLayout from "../../layouts/MainLayout";
 import Catalog from "../../components/Catalog";
 
 export default function Main() {
-    return (
-        <Catalog/> 
-    )
+  return (
+    <MainLayout>
+      <Catalog />
+    </MainLayout>
+  );
 }

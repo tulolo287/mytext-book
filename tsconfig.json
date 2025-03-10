@@ -4,11 +4,7 @@
     "jsx": "react-jsx",
     "module": "esnext",
     "moduleResolution": "node",
-    "lib": [
-      "es2022",
-      "dom",
-      "dom.iterable"
-    ],
+    "lib": ["es2022", "dom", "dom.iterable"],
     "target": "ES2022",
     "allowJs": true,
     "skipLibCheck": true,
@@ -20,27 +16,12 @@
     "sourceMap": true,
     "baseUrl": "./",
     "paths": {
-      "components/*": [
-        "src/components/*"
-      ],
-      "styles/*": [
-        "src/styles/*"
-      ],
-      "hooks/*": [
-        "src/hooks/*"
-      ],
-      "assets/*": [
-        "src/assets/*"
-      ],
-      "pages/*": [
-        "src/pages/*"
-      ],
-      "services/*": [
-        "src/services/*"
-      ],
-      "layouts/*": [
-        "src/layouts/*"
-      ]
+      "components/*": ["src/components/*"],
+      "styles/*": ["src/styles/*"],
+      "hooks/*": ["src/hooks/*"],
+      "assets/*": ["src/assets/*"],
+      "pages/*": ["src/pages/*"],
+      "services/*": ["src/services/*"]
     },
     "plugins": [
       {
@@ -48,7 +29,6 @@
       }
     ]
   },
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
 }

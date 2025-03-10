@@ -18,7 +18,16 @@ module.exports = {
     publicPath: "/",
   },
   resolve: {
-    extensions: [".js", ".ts", ".tsx"]
+    alias: {
+      components: path.resolve(__dirname, "src/components/"),
+      styles: path.resolve(__dirname, "src/styles/"),
+      hooks: path.resolve(__dirname, "src/hooks/"),
+      assets: path.resolve(__dirname, "src/assets/"),
+      pages: path.resolve(__dirname, "src/pages/"),
+      services: path.resolve(__dirname, "src/services/"),
+      layouts: path.resolve(__dirname, "src/layouts/"),
+    },
+    extensions: [".js", ".ts", ".tsx"],
   },
   module: {
     rules: [
@@ -28,42 +37,37 @@ module.exports = {
           extensions: [".ts", ".tsx", ".js", ".json", ".css", ".scss"],
         },
         exclude: /node_modules/,
-        use: "babel-loader"
+        use: "babel-loader",
       },
       {
         test: /\.html$/,
-        use: "html-loader"
+        use: "html-loader",
       },
       {
         test: /\.css$/,
         use: [
-          "style-loader",
+          { loader: "style-loader" },
           {
             loader: "css-loader",
             options: {
-              modules: true,
-              importLoaders: 1,
-              localIdentName: "[name]_[local]_[hash:base64]",
-              sourceMap: true,
-              minimize: true
+              modules: {
+                namedExport: false,
+                exportLocalsConvention: "as-is",
+              },
             },
           },
         ],
       },
       {
         test: /\.scss$/,
-        use: [
-          "style-loader",
-          "css-loader",
-          "sass-loader"
-        ],
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
     ],
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HTMLWebpackPlugin({
-      template: "index.html"
+      template: "index.html",
     }),
-  ]
-}
+  ],
+};
