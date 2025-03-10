@@ -21,9 +21,12 @@ module.exports = {
     extensions: [".js", ".ts", ".tsx"]
   },
   module: {
-    rules:[
+    rules: [
       {
         test: /\.(js|jsx|ts|tsx)$/,
+        resolve: {
+          extensions: [".ts", ".tsx", ".js", ".json", ".css", ".scss"],
+        },
         exclude: /node_modules/,
         use: "babel-loader"
       },
@@ -31,19 +34,32 @@ module.exports = {
         test: /\.html$/,
         use: "html-loader"
       },
-      /*Choose only one of the following two: if you're using 
-      plain CSS, use the first one, and if you're using a
-      preprocessor, in this case SASS, use the second one*/
+      {
+        test: /\.css$/,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              modules: true,
+              importLoaders: 1,
+              localIdentName: "[name]_[local]_[hash:base64]",
+              sourceMap: true,
+              minimize: true
+            },
+          },
+        ],
+      },
       {
         test: /\.scss$/,
-        use:[
+        use: [
           "style-loader",
           "css-loader",
           "sass-loader"
         ],
       },
-    ], 
-  },  
+    ],
+  },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HTMLWebpackPlugin({
