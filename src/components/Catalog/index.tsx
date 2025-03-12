@@ -1,17 +1,19 @@
+import Filter from "components/Filter";
 import Pagination from "components/Pagination";
 import Search from "components/Search";
 import { useDebounce } from "hooks/index";
-import { memo, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import CatalogItem from "./CatalogItem";
 import styles from "./catalog.module.css";
 
-const CatalogMemo = memo(function Catalog() {
+export default function Catalog() {
   const [data, setData] = useState();
   const params = useParams();
   const { pageNum } = params;
   const [query, setQuery] = useState({ search: "", total: 10, limit: 5 });
   const [search, setSearch] = useState("");
+  const [filter, setFilter] = useState([]);
   const searchDebounce = useDebounce(search, 2000);
 
   const baseUrl = "https://dummyjson.com/products";
@@ -19,11 +21,17 @@ const CatalogMemo = memo(function Catalog() {
   useEffect(() => {
     let totalQuery = baseUrl;
     let skip = 0;
+    let categories = "";
     if (pageNum) {
       skip = (pageNum - 1) * query.limit;
     }
-
-    totalQuery = `${totalQuery}/search?q=${search}&limit=${query.limit}&skip=${skip}`;
+    console.log(filter)
+    if (filter.length > 0) {
+      categories = `/category/${filter[filter.length-1].name}`;
+      totalQuery = `${totalQuery}${categories}?limit=${query.limit}&skip=${skip}`;
+    } else {
+      totalQuery = `${totalQuery}/search?q=${search}&limit=${query.limit}&skip=${skip}`;
+    }
 
     fetch(totalQuery)
       .then((response) => response.json())
@@ -31,19 +39,22 @@ const CatalogMemo = memo(function Catalog() {
         setData(data.products);
         setQuery({ ...query, total: data.total });
       });
-  }, [pageNum, searchDebounce]);
+  }, [pageNum, searchDebounce, filter]);
 
   return (
     <>
       <Search setSearch={setSearch} />
-      <article className={styles.catalog}>
-        {data
-          ? data?.map((item) => <CatalogItem book={item} />)
-          : "Loading ..."}
-      </article>
-      <Pagination total={query.total} limit={query.limit} />
+      {data ? (
+        <>
+          <Filter setFilter={setFilter} />
+          <article className={styles.catalog}>
+            {data?.map((item) => <CatalogItem key={item.id} book={item} />)}
+          </article>
+          <Pagination total={query.total} limit={query.limit} />
+        </>
+      ) : (
+        "Loading ..."
+      )}
     </>
   );
-});
-
-export default CatalogMemo;
+}
