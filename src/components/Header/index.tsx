@@ -10,5 +10,6 @@ export default function Header() {
         <NavLink to="/">Logo</NavLink>
         <NavLink to="/login">Login</NavLink>
       </nav>
-    </header>)
+    </header>
+  );
 }

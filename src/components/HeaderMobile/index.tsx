@@ -3,13 +3,13 @@ import styles from "./header-mobile.module.css";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
-
 export default function HeaderMobile() {
-  const isMobie = false
+  const isMobie = false;
 
   return (
-   <div className={styles.container}>
+    <div className={styles.container}>
+      <NavLink to="/">Logo</NavLink>
       <BurgerMenu />
-   </div>
-    )
+    </div>
+  );
 }
